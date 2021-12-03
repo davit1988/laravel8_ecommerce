@@ -1,1 +1,2 @@
-dadmin ashboard
+@extends('layouts.admin')
+@section('page','Dashboard')

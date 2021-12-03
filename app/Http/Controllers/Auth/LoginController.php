@@ -30,6 +30,7 @@ class LoginController extends Controller
      */
 //    protected $redirectTo = RouteServiceProvider::HOME;
 
+//loginic heto ur gna
     public function redirectTo()
     {
         if (Auth::user()->role_as == '1') //1 = Admin Login
@@ -41,7 +42,7 @@ class LoginController extends Controller
         }
     }
 
-    //Second method to Redirect with Message ("STATUS") eg: welcome to dashboard
+    //override anum login i funkcian aysinqn loginic araj inch ani tvyal depqum statusa poxancum
     protected function authenticated()
     {
         if(Auth::user()->role_as == '1') //1 = Admin Login
