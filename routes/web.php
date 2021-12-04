@@ -28,4 +28,6 @@ Route::group(['middleware' => ['auth','isAdmin']], function () {
         return view('admin.dashboard');
     });
 
+    //app/Providers/RouteServiceProvider.php um commentic hanel em protected $namespace = 'App\\Http\\Controllers';
+    Route::resource('categories',\Admin\CategoryController::class);
 });

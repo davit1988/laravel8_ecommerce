@@ -13,6 +13,7 @@
 {{--    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">--}}
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('admin/dist/css/adminlte.min.css')}}">
+    <link rel="stylesheet" href="{{asset('admin/plugins/summernote/summernote-bs4.min.css')}}">
 </head>
 <!--
 `body` tag options:
@@ -116,10 +117,25 @@
 <script src="{{asset('admin/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- AdminLTE -->
 <script src="{{asset('admin/dist/js/adminlte.js')}}"></script>
-
-<!-- OPTIONAL SCRIPTS -->
 <script src="{{asset('admin/plugins/chart.js/Chart.min.js')}}"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{asset('admin/dist/js/pages/dashboard3.js')}}"></script>
+<script src="{{asset('admin/custom/custom.js')}}"></script>
+<script src="{{asset('admin/plugins/summernote/summernote-bs4.min.js')}}"></script>
+<script src="{{asset('admin/custom/flash.min.js')}}"></script>
+@yield('script')
+<script>
+    $(document).ready(function () {
+        @if(Session::has('success'))
+            var msg = "{{Session::get('success')}}";
+            flashMessage(msg)
+        @endif
+        $('#summernote').summernote({
+            placeholder: "Write short description.....",
+            tabsize: 2,
+            height: 100
+        });
+    });
+
+</script>
 </body>
 </html>

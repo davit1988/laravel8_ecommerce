@@ -28,6 +28,12 @@
                     <p>Dashboard</p>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{route('categories.index')}}" class="nav-link {{ (request()->is('categories*')) ? 'active' : '' }}">
+                    <i class="nav-icon  fas fa-list"></i>
+                    <p>Categories</p>
+                </a>
+            </li>
 
         </ul>
     </nav>
