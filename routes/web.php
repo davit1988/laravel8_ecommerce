@@ -30,4 +30,5 @@ Route::group(['middleware' => ['auth','isAdmin']], function () {
 
     //app/Providers/RouteServiceProvider.php um commentic hanel em protected $namespace = 'App\\Http\\Controllers';
     Route::resource('categories',\Admin\CategoryController::class);
+    Route::resource('products',\Admin\ProductsController::class);
 });

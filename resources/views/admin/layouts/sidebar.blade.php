@@ -23,7 +23,7 @@
             {{--                        </ul>--}}
             {{--                    </li>--}}
             <li class="nav-item">
-                <a href="pages/widgets.html" class="nav-link {{ (request()->is('dashboard')) ? 'active' : '' }}">
+                <a href="{{url('dashboard')}}" class="nav-link {{ (request()->is('dashboard')) ? 'active' : '' }}">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
                     <p>Dashboard</p>
                 </a>
@@ -32,6 +32,12 @@
                 <a href="{{route('categories.index')}}" class="nav-link {{ (request()->is('categories*')) ? 'active' : '' }}">
                     <i class="nav-icon  fas fa-list"></i>
                     <p>Categories</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('products.index')}}" class="nav-link {{ (request()->is('products*')) ? 'active' : '' }}">
+                    <i class="fab fa-product-hunt"></i>
+                    <p>Products</p>
                 </a>
             </li>
 

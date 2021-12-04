@@ -36,7 +36,7 @@
 
                 <div class="form-group">
                     <label for="popular">Popular</label><br>
-                    <input type="checkbox" name='popular' id='popular' value='1' {{$category->status == 1 ? 'checked' : '' }} > Yes
+                    <input type="checkbox" name='popular' id='popular' value='1' {{$category->popular == 1 ? 'checked' : '' }} > Yes
                 </div>
 
                 <div class="form-group">
